@@ -1,0 +1,12 @@
+.venv/
+.venv_broken_20260426/
+.tmp/
+__pycache__/
+*.pyc
+.env
+mezastar/setting/.env
+mezastar/config.js
+*.bak
+
+data/raw/*.json
+data/raw/*.json.tmp

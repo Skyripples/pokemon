@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pokemon Mezastar 店址地圖</title>
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+  <div class="layout">
+    <aside class="sidebar">
+      <h1>Pokemon Mezastar 店址地圖</h1>
+
+      <div class="toolbar">
+        <a class="button-link" href="../">回到首頁</a>
+        <button id="btn-locate" type="button">定位目前位置</button>
+        <button id="btn-reload" type="button">重新載入資料</button>
+      </div>
+
+      <div class="search-box">
+        <input id="search-input" type="text" placeholder="搜尋店名或地址" />
+      </div>
+
+      <p id="status-text" class="status-text">準備載入資料...</p>
+
+      <div class="meta-box">
+        <div>店家數量：<span id="store-count">0</span></div>
+        <div>座標完成：<span id="geocoded-count">0</span></div>
+      </div>
+
+      <ul id="store-list" class="store-list"></ul>
+    </aside>
+
+    <main class="map-panel">
+      <div id="map"></div>
+    </main>
+  </div>
+
+  <script src="./config.js"></script>
+  <script src="./app.js"></script>
+</body>
+</html>

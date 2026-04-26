@@ -1,0 +1,10 @@
+[project]
+name = "pokemon-counter-search"
+version = "0.1.0"
+description = "Download Pokemon data and prepare a fast local search foundation."
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = []
+
+[tool.pytest.ini_options]
+pythonpath = ["."]

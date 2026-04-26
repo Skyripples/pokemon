@@ -1,0 +1,156 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  height: 100%;
+  font-family: "Segoe UI", "Microsoft JhengHei", sans-serif;
+  background: #f5f7fb;
+  color: #1f2937;
+}
+
+.layout {
+  display: flex;
+  height: 100vh;
+  width: 100%;
+}
+
+.sidebar {
+  width: 360px;
+  max-width: 100%;
+  background: #ffffff;
+  border-right: 1px solid #dbe2ea;
+  display: flex;
+  flex-direction: column;
+  padding: 16px;
+  overflow: hidden;
+}
+
+.sidebar h1 {
+  margin: 0 0 12px;
+  font-size: 22px;
+}
+
+.toolbar {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-bottom: 12px;
+}
+
+button,
+.button-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 12px;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  background: #ffffff;
+  color: #1f2937;
+  cursor: pointer;
+  font-size: 14px;
+  line-height: 1.2;
+  text-decoration: none;
+}
+
+button:hover,
+.button-link:hover {
+  background: #f8fafc;
+}
+
+button:disabled {
+  cursor: wait;
+  opacity: 0.65;
+}
+
+.search-box {
+  margin-bottom: 10px;
+}
+
+.search-box input {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  font-size: 14px;
+}
+
+.status-text {
+  margin: 0 0 12px;
+  font-size: 14px;
+  color: #475569;
+}
+
+.meta-box {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 12px;
+  font-size: 14px;
+  color: #334155;
+}
+
+.store-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.store-item {
+  border: 1px solid #dbe2ea;
+  border-radius: 10px;
+  padding: 12px;
+  background: #ffffff;
+}
+
+.store-item h3 {
+  margin: 0 0 6px;
+  font-size: 16px;
+}
+
+.store-item p {
+  margin: 4px 0;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.store-item .actions {
+  display: flex;
+  gap: 8px;
+  margin-top: 10px;
+  flex-wrap: wrap;
+}
+
+.map-panel {
+  flex: 1;
+  min-width: 0;
+}
+
+#map {
+  width: 100%;
+  height: 100%;
+}
+
+@media (max-width: 900px) {
+  .layout {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+    height: 42vh;
+    border-right: 0;
+    border-bottom: 1px solid #dbe2ea;
+  }
+
+  .map-panel {
+    height: 58vh;
+  }
+}
